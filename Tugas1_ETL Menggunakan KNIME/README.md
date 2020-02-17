@@ -13,6 +13,8 @@ Berikut adalah contoh dari pemrosesan data yang lalu divisualisasikan dengan bai
 ![SS BU 2](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/bu2.png)
 ![SS BU 3](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/bu3.png)
 
+Sumber : https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
+
 ### Data Understanding
 
 ### Data Preparation
