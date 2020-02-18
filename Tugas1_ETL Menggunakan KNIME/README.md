@@ -65,24 +65,24 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
 ![SS split5](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split5.png)
 > Hasil split data akan menghasilkan 13910 baris, baik di Excel atau di database, sedangkan jumlah baris di data asli adalah 27820
 > Hal ini terjadi karena memang perbandingan jumlah kategori male dan female di dataset asli dari Kaggle seimbang, yaitu 50 : 50
-![SS 5050]()
+![SS 5050](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/5050.png)
 
 **Append Data**
-![SS append1]()
+![SS append1](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append1.png)
 * Berikut adalah gambaran besar alur proses Append Data
 * Hasil append akan disimpan ke database dan file JSON
 * Untuk membaca dari database (data male), dimulai dengan node **DB Connector** dengan konfigurasi sama dengan proses split, karena hanya untuk membuka koneksi
 * Selanjutnya, hubungkan **DB Connector** dengan node **DB Table Selector** yang akan memilih tabel mana dari database yang akan diproses, dengan memilih *schema* dan *table* mana yang akan dipilih
-![SS append2]()
+![SS append2](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append2.png)
 * Lalu, hubungkan node tersebut dengan **DB Reader** yang akan membaca isi dari tabel tersebut
 * Untuk membaca dari Excel (data female), digunakan node **Excel Reader**, dengan cukup memilih file mana yang akan dibaca
 * Siapkan node **Concatenate** yang akan menggabungkan output dari **DB Reader** dan **Excel Reader** menjadi satu tabel besar kembali
-![SS append3]()
+![SS append3](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append3.png)
 * Input atas dari **Concatenate** akan diletakkan di baris bagian atas tabel, dan input bawahnya akan diletakkan di bagian bawah tabel
 * Selanjutnya simpan hasil proses append tadi ke database dan JSON
 * Seperti pada proses split, untuk database, gunakan node **DB Writer** dengan input hasil **Concatenate** dan koneksi dari **DB Connector**
-![SS append4]()
+![SS append4](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append4.png)
 * Untuk penyimpana ke JSON, hubungkan **Concatenate** ke node **Table to JSON**, untuk mentransformasi bentuk tabel menjadi bentuk JSON
-![SS append5]()
+![SS append5](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append5.png)
 * Setelah bentuk JSON siap, maka masukkan outputnya ke node **JSON Writer** untuk disimpan ke sebuah file JSON, konfigurasinya memilih lokasi simpan dan nama file JSON-nya
-![SS append6]()
+![SS append6](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append6.png)
