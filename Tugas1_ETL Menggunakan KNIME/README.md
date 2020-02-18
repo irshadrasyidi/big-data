@@ -1,6 +1,8 @@
 # Dokumentasi Tugas 1 ETL Menggunakan KNIME
 ## Dataset Suicide Rates 1985 - 2016
 
+Sumber Dataset : (https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
+
 ### Business Understanding
 * Dataset berikut dapat dianalisis secara mendalam untuk mengetahui negara/benua mana yang memiliki kasus bunuh diri tinggi dan rendah, serta fluktuasi jumlah kasus dari tahun ke tahun.
 * Selain dari letak geografis, analisis demografis bisa juga dilakukan untuk mengatahui gender mana yang lebih berpotensi bunuh diri di suatu negara, serta umur dari korban bunuh diri.
