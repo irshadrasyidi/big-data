@@ -40,10 +40,32 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
   * GDP dan GDP per kapita menunjukan tingkat perekonomian suatu negara. (https://www.investopedia.com/terms/g/gdp.asp)
   * HDI dan GDP dapat merepresentasikan tingkat kemakmuran suatu negara pada tahun tertentu, masuk kategori negara maju atau negara berkembang
 
-### Data Preparation
+### Data Preparation, Modeling, dan Evaluation
+## Splitting Data
+![SS split1]()
+* Berikut adalah gambaran besar jalannya proses splitting data.
+* Pada kasus ini, penulis akan menbagi data menjadi 2 tabel, yaitu tabel berisi data terkait kasus bunuh diri, dan tabel berisi data terkait tingkat kemakmuran negara.
+* Pertama, baca dataset asli berupa CSV dengan node **CSV Reader** dengan memilih file CSV-nya melalui konfigurasi node tersebut
+* Untuk proses split, digunakan node **Column Splitter**
+![SS split2]()
+* Di konfigurasi **Column Splitter**, pilah kolom mana saja yang mau dipisah.
+* Siapkan node **DB Connector** dan **DB Writer**
+* **DB Connector** bertugas membuat koneksi ke Database
+![SS split3]()
+* Set Database Type ke MySQL, karena penulis menggunakan MySQL dari XAMPP
+* Masukkan URL Database dengan localhost, port, dan nama databasenya
+* Jangan lupa untuk menjalankan XAMPP-nya dulu
+* **DB Writer** bertugas untuk menulis hasil split ke dalam database
+* Hubungkan koneksi **DB Connector** (kotak merah) ke **DB Writer**, dan output **Column Splitter** (panah) ke input **DB Writer**
+* Beri nama tabel yang dinginkan di konfigurasi **DB Writer**
+* Setelah dijalankan, tabel akan terbentuk di dalam Database (lihat melalui PhpMyAdmin)
+![SS split4]()
+* Lalu, buat node **Excel Writer** untuk menyimpan sebagian data satunya
+* Pada konfigurasinya, cukup pilih letak file Excel akan terbuat
+![SS split5]()
 
-### Modeling
+## Append Data
 
-### Evaluation
+
 
 ### Deployment
