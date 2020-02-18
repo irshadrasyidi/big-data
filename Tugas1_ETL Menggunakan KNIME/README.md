@@ -44,11 +44,11 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
 ## Splitting Data
 ![SS split1]()
 * Berikut adalah gambaran besar jalannya proses splitting data.
-* Pada kasus ini, penulis akan menbagi data menjadi 2 tabel, yaitu tabel berisi data terkait kasus bunuh diri, dan tabel berisi data terkait tingkat kemakmuran negara.
+* Pada kasus ini, penulis akan membagi data menjadi 2 tabel, yaitu tabel berisi data korban male, dan tabel berisi data korban female.
 * Pertama, baca dataset asli berupa CSV dengan node **CSV Reader** dengan memilih file CSV-nya melalui konfigurasi node tersebut
-* Untuk proses split, digunakan node **Column Splitter**
+* Untuk proses split, digunakan node **Row Splitter**
 ![SS split2]()
-* Di konfigurasi **Column Splitter**, pilah kolom mana saja yang mau dipisah.
+* Di konfigurasi **Row Splitter**, isi *column to test* dengan opsi **sex**, lalu untuk *mathing criteria*-nya diisi **male**
 * Siapkan node **DB Connector** dan **DB Writer**
 * **DB Connector** bertugas membuat koneksi ke Database
 ![SS split3]()
@@ -56,7 +56,7 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
 * Masukkan URL Database dengan localhost, port, dan nama databasenya
 * Jangan lupa untuk menjalankan XAMPP-nya dulu
 * **DB Writer** bertugas untuk menulis hasil split ke dalam database
-* Hubungkan koneksi **DB Connector** (kotak merah) ke **DB Writer**, dan output **Column Splitter** (panah) ke input **DB Writer**
+* Hubungkan koneksi **DB Connector** (kotak merah) ke **DB Writer**, dan output **Row Splitter** (panah) ke input **DB Writer**
 * Beri nama tabel yang dinginkan di konfigurasi **DB Writer**
 * Setelah dijalankan, tabel akan terbentuk di dalam Database (lihat melalui PhpMyAdmin)
 ![SS split4]()
