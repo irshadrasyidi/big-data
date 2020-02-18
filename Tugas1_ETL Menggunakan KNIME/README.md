@@ -37,8 +37,8 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
   * Di tahun itu, Albania memiliki populasi 241200 orang, sehingga *Suicide Rate* atau kasus bunuh diri/100000 orang senilai 4.56
   * Di tahun itu juga, Albania memiliki nilai HDI 0.619, GDP 2,424,499,009, dan GDP per capita-nya 835
   * HDI adalah Index Pembangunan Manusia (IPM), adalah pengukuran perbandingan dari harapan hidup, melek huruf, pendidikan dan standar hidup di suatu negara. (https://id.wikipedia.org/wiki/Indeks_Pembangunan_Manusia)
-  * GDP dan GDP per kapita menunjukan tingkat perekonomian suatu negara
-  * HDI dan GDP dapat merepresentasikan suatu negara pada tahun tertentu masuk kategori negara maju atau negara berkembang
+  * GDP dan GDP per kapita menunjukan tingkat perekonomian suatu negara. (https://www.investopedia.com/terms/g/gdp.asp)
+  * HDI dan GDP dapat merepresentasikan tingkat kemakmuran suatu negara pada tahun tertentu, masuk kategori negara maju atau negara berkembang
 
 ### Data Preparation
 
