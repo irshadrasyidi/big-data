@@ -63,9 +63,12 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
 * Lalu, buat node **Excel Writer** untuk menyimpan sebagian data satunya
 * Pada konfigurasinya, cukup pilih letak file Excel akan terbuat
 ![SS split5](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split5.png)
-> Hasil split data akan menghasilkan 13910 baris, baik di Excel atau di database, sedangkan jumlah baris di data asli adalah 27820
-> Hal ini terjadi karena memang perbandingan jumlah kategori male dan female di dataset asli dari Kaggle seimbang, yaitu 50 : 50
+> Hasil split data akan menghasilkan 13910 baris, baik di Excel atau di database, sedangkan jumlah baris di data asli adalah 27820, persis dua kalinya
+> Hal ini terjadi karena memang perbandingan **jumlah kategori** male dan female di dataset asli dari Kaggle seimbang, yaitu 50 : 50
 ![SS 5050](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/5050.png)
+> ***NOTE***: Jika ingin menghitung **jumlah kasus** yang terjadi untuk setiap gender, jumlahkan nilai dari kolom *suicides_no* di semua baris dari hasil split, lalu bandingkan. Hasilnya akan menunjukan kasus bunuh diri male lebih banyak daripada kasus female, sekitar 75% dari seluruh kasus bunuh diri
+![SS genderratio](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/genderratio.png)
+
 
 **Append Data**
 ![SS append1](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/append1.png)
