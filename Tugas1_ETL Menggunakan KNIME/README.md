@@ -13,9 +13,32 @@ Berikut adalah contoh dari pemrosesan data yang lalu divisualisasikan dengan bai
 ![SS BU 2](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/bu2.png)
 ![SS BU 3](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/bu3.png)
 
-Sumber : https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
+Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard)
 
 ### Data Understanding
+* country : Negara korban bunuh diri
+* year : Tahun terjadinya kasus bunuh diri
+* sex : Gender korban bunuh diri
+* age : Range umur korban bunuh diri
+* suicides_no : Jumlah kasus bunuh diri yang terjadi pada periode dan kategori tersebut
+* population : Jumlah populasi penduduk di negara tersebut
+* suicides/100k pop : Jumlah kasus bunuh diri per 100000 populasi
+* country-year : Sandingan negara dan tahun kasus bunuh diri terjadi
+* HDI for year : Human Development Index negara pada tahun tersebut
+* gdp_for_year : Gross Domestic Product negara pada tahun tersebut
+* gdp_per_capita : GDP per Kapita negara pada tahun tersebut
+* generation : Generasi korban bunuh diri
+
+**CATATAN PENTING**
+* Setiap row dalam dataset asli **tidak** merepresentasikan satu kasus bunuh diri, tetapi jumlah kasus bunuh diri pada parameter kategori tersebut.
+* Contoh :
+> Albania,1995,male,15-24 years,11,241200,4.56,Albania1995,0.619,"2,424,499,009",835,Generation X
+  * Row di atas berarti di negara Albania pada tahun 1995 ada 11 orang laki-laki dari generasi X berumur 15-24 tahun melakukan bunuh diri.
+  * Di tahun itu, Albania memiliki populasi 241200 orang, sehingga *Suicide Rate* atau kasus bunuh diri/100000 orang senilai 4.56
+  * Di tahun itu juga, Albania memiliki nilai HDI 0.619, GDP 2,424,499,009, dan GDP per capita-nya 835
+  * HDI adalah Index Pembangunan Manusia (IPM), adalah pengukuran perbandingan dari harapan hidup, melek huruf, pendidikan dan standar hidup di suatu negara. (https://id.wikipedia.org/wiki/Indeks_Pembangunan_Manusia)
+  * GDP dan GDP per kapita menunjukan tingkat perekonomian suatu negara
+  * HDI dan GDP dapat merepresentasikan suatu negara pada tahun tertentu masuk kategori negara maju atau negara berkembang
 
 ### Data Preparation
 
