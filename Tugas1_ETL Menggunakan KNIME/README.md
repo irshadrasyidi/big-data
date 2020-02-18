@@ -42,16 +42,16 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
 
 ### Data Preparation, Modeling, dan Evaluation
 ## Splitting Data
-![SS split1]()
+![SS split1](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split1.png)
 * Berikut adalah gambaran besar jalannya proses splitting data.
 * Pada kasus ini, penulis akan membagi data menjadi 2 tabel, yaitu tabel berisi data korban male, dan tabel berisi data korban female.
 * Pertama, baca dataset asli berupa CSV dengan node **CSV Reader** dengan memilih file CSV-nya melalui konfigurasi node tersebut
 * Untuk proses split, digunakan node **Row Splitter**
-![SS split2]()
+![SS split2](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split2.png)
 * Di konfigurasi **Row Splitter**, isi *column to test* dengan opsi **sex**, lalu untuk *mathing criteria*-nya diisi **male**
 * Siapkan node **DB Connector** dan **DB Writer**
 * **DB Connector** bertugas membuat koneksi ke Database
-![SS split3]()
+![SS split3](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split3.png)
 * Set Database Type ke MySQL, karena penulis menggunakan MySQL dari XAMPP
 * Masukkan URL Database dengan localhost, port, dan nama databasenya
 * Jangan lupa untuk menjalankan XAMPP-nya dulu
@@ -59,10 +59,10 @@ Sumber : (https://www.kaggle.com/tavoosi/suicide-data-full-interactive-dashboard
 * Hubungkan koneksi **DB Connector** (kotak merah) ke **DB Writer**, dan output **Row Splitter** (panah) ke input **DB Writer**
 * Beri nama tabel yang dinginkan di konfigurasi **DB Writer**
 * Setelah dijalankan, tabel akan terbentuk di dalam Database (lihat melalui PhpMyAdmin)
-![SS split4]()
+![SS split4](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split4.png)
 * Lalu, buat node **Excel Writer** untuk menyimpan sebagian data satunya
 * Pada konfigurasinya, cukup pilih letak file Excel akan terbuat
-![SS split5]()
+![SS split5](https://github.com/irshadrasyidi/big-data/blob/master/Tugas1_ETL%20Menggunakan%20KNIME/images/split5.png)
 
 ## Append Data
 
